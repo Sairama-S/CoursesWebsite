@@ -1,0 +1,19 @@
+<div id="home-cont">
+  <h1 id="home-title">Search From An Extensive Catalog Of Courses</h1>
+  <div id="search-cont">
+    <h3 style="display: inline;">Explore Courses: &nbsp;</h3>
+    <input type="text" id="search" [(ngModel)]="searchTxt">
+  </div>
+  <div id="courses-cont" *ngIf="searchedCourses">
+    <div class="card" style="width: 18rem;" *ngFor="let course of searchedCourses">
+        <img [src]="course.imageUrl" class="card-img-top" alt="course-image" [width]="imgWidth" [height]="imgHeight">
+        <div class="card-body">
+            <h5 class="card-title">{{course.courseName}}</h5>
+            <p><strong>Students Enrolled:&nbsp;</strong>{{course.numEnrolled}}</p>
+            <p class="card-text">{{course.courseBriefDesc}}</p>
+          <a routerLink="/course-detail" class="btn btn-primary" routerLinkActive="activebutton"
+          ariaCurrentWhenActive="page" (click)="this.courseService.currentId = course.courseId">More Details</a>                    
+        </div>
+      </div>
+  </div>
+</div>

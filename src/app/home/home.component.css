@@ -1,0 +1,39 @@
+#home-cont {
+    margin: 0px 5px;
+}
+
+#home-title {
+    text-align: center;
+    color: firebrick;    
+}
+
+#courses-cont {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-content: center;
+    justify-content: center;
+}
+
+#search-cont {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.card {
+    margin: 20px 20px;
+    text-align: center;
+}
+
+.card-img-top {
+    object-fit: cover;
+    object-position: center;
+}
+
+#search {
+    border-radius: 4px;
+    background-color: beige;
+    color: black;
+    font-size: 1.2rem;
+    padding: 4px;
+    margin: 0px 4px;
+}
